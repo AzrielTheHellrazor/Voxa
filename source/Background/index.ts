@@ -739,7 +739,7 @@ class SwapSendMCPClient {
       ];
 
       const completion = await this.openai.chat.completions.create({
-        model: "gpt-3.5-turbo",
+        model: "o3-mini",
         messages,
         tools: openaiTools.length > 0 ? openaiTools : undefined,
         tool_choice: "auto",
@@ -765,7 +765,7 @@ class SwapSendMCPClient {
         ];
 
         const followUpCompletion = await this.openai.chat.completions.create({
-          model: "gpt-o3-mini",
+          model: "o3-mini",
           messages: followUpMessages,
         });
 
